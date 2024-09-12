@@ -1,5 +1,8 @@
 mod coin_match;
+mod caluculation;
+
 use coin_match::{Coin, UsState, value_in_cents};
+use caluculation::caluculate;
 
 fn main() {
     let coin1 = Coin::Quarter(UsState::Alaska);
@@ -17,4 +20,7 @@ fn main() {
     let coin4 = Coin::Dime;
     let value4 = value_in_cents(coin4);
     println!("The coin's value is: {} cents", value4);
+
+    // 四則演算
+    caluculate();
 }
